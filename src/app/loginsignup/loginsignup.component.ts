@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-loginsignup',
-  imports: [RouterOutlet],
+  imports: [RouterModule],
   templateUrl: './loginsignup.component.html',
   styleUrl: './loginsignup.component.css'
 })

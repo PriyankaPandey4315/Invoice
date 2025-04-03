@@ -5,7 +5,7 @@
 
     <!-- Toggle buttons starts -->
     <div class="d-flex">
-      <button class="toggle-sidebar" (click)="toggleDrawer()">
+      <button class="toggle-sidebar">
         <i class="ri-menu-line"></i>
       </button>
       <button class="pin-sidebar" >
@@ -361,51 +361,51 @@
             </a>
           </li>
           <li>
-            <a href="dashboard2.html">
+            <a href="/medical-dashboard">
               <i class="ri-home-smile-2-line"></i>
               <span class="menu-text">Medical Dashboard</span>
             </a>
           </li>
           <li>
-            <a href="dashboard3.html">
+            <a href="/dentist-dashboard">
               <i class="ri-home-5-line"></i>
               <span class="menu-text">Dentist Dashboard</span>
             </a>
           </li>
-          <li class="treeview">
-            <a href="#!">
+          <li class="treeview" [class.active]="isDropdownMenu">
+            <a href="javascript:void(0)" (click)="dropDown()">
               <i class="ri-stethoscope-line"></i>
               <span class="menu-text">Doctors</span>
             </a>
-            <ul class="treeview-menu">
+            <ul class="treeview-menu" [ngClass]="{ 'open': isDropdownMenu }">
               <li>
-                <a href="doctor-dashboard.html">Doctors Dashboard</a>
+                <a routerLink= "doctors/doctors-dashboard">Doctors Dashboard</a>
               </li>
               <li>
-                <a href="doctors-list.html">Doctors List</a>
+                <a routerLink="doctors/doctorslist">Doctors List</a>
               </li>
               <li>
-                <a href="doctors-cards.html">Doctors Cards</a>
+                <a routerLink="doctors/doctorscards">Doctors Cards</a>
+              </li> 
+              <li>
+                <a routerLink="doctors/doctorsprofile">Doctors Profile</a>
               </li>
               <li>
-                <a href="doctors-profile.html">Doctors Profile</a>
+                <a routerLink="doctors/adddoctor">Add Doctor</a>
               </li>
               <li>
-                <a href="add-doctors.html">Add Doctor</a>
-              </li>
-              <li>
-                <a href="edit-doctors.html">Edit Doctor</a>
+                <a routerLink="doctors/editdoctor">Edit Doctor</a>
               </li>
             </ul>
           </li>
-          <li class="treeview">
-            <a href="#!">
+          <li class="treeview"[class.active]="isDropdownMenu">
+            <a href="javascript:void(0)" (click)="dropDown()">
               <i class="ri-heart-pulse-line"></i>
               <span class="menu-text">Patients</span>
             </a>
-            <ul class="treeview-menu">
+            <ul class="treeview-menu" [ngClass]="{ 'open': isDropdownMenu }">
               <li>
-                <a href="patient-dashboard.html">Patients Dashboard</a>
+                <a href="/patient-dashboard">Patients Dashboard</a>
               </li>
               <li>
                 <a href="patients-list.html">Patients List</a>
