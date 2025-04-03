@@ -372,12 +372,12 @@
               <span class="menu-text">Dentist Dashboard</span>
             </a>
           </li>
-          <li class="treeview" [class.active]="isDropdownMenu">
-            <a href="javascript:void(0)" (click)="dropDown()">
+          <li class="treeview" [class.active]="isDropDownMenuList[0].isChecked">
+            <a href="javascript:void(0)" (click)="dropDown('doctor')">
               <i class="ri-stethoscope-line"></i>
               <span class="menu-text">Doctors</span>
             </a>
-            <ul class="treeview-menu" [ngClass]="{ 'open': isDropdownMenu }">
+            <ul class="treeview-menu" [ngClass]="{ 'open': isDropDownMenuList[0].isChecked }">
               <li>
                 <a routerLink= "doctors/doctors-dashboard">Doctors Dashboard</a>
               </li>
@@ -398,12 +398,12 @@
               </li>
             </ul>
           </li>
-          <li class="treeview"[class.active]="isDropdownMenu">
-            <a href="javascript:void(0)" (click)="dropDown()">
+          <li class="treeview"[class.active]="isDropDownMenuList[1].isChecked">
+            <a href="javascript:void(0)" (click)="dropDown('patient')">
               <i class="ri-heart-pulse-line"></i>
               <span class="menu-text">Patients</span>
             </a>
-            <ul class="treeview-menu" [ngClass]="{ 'open': isDropdownMenu }">
+            <ul class="treeview-menu" [ngClass]="{ 'open': isDropDownMenuList[1].isChecked }">
               <li>
                 <a href="/patient-dashboard">Patients Dashboard</a>
               </li>
