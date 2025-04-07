@@ -1,0 +1,305 @@
+<div class="app-container">
+
+    <!-- App hero header starts -->
+    <div class="app-hero-header d-flex align-items-center">
+
+      <!-- Breadcrumb starts -->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <i class="ri-home-8-line lh-1 pe-3 me-3 border-end"></i>
+          <a href="/hospital-dashboard">Home</a>
+        </li>
+        <li class="breadcrumb-item text-primary" aria-current="page">
+          Create Invoice
+        </li>
+      </ol>
+      <!-- Breadcrumb ends -->
+
+      <!-- Sales stats starts -->
+      <div class="ms-auto d-lg-flex d-none flex-row">
+        <div class="d-flex flex-row gap-1 day-sorting">
+          <button class="btn btn-sm btn-primary">Today</button>
+          <button class="btn btn-sm">7d</button>
+          <button class="btn btn-sm">2w</button>
+          <button class="btn btn-sm">1m</button>
+          <button class="btn btn-sm">3m</button>
+          <button class="btn btn-sm">6m</button>
+          <button class="btn btn-sm">1y</button>
+        </div>
+      </div>
+      <!-- Sales stats ends -->
+
+    </div>
+    <!-- App Hero header ends -->
+
+    <!-- App body starts -->
+    <div class="app-body">
+
+      <!-- Row start -->
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="create-invoice-wrapper">
+                <!-- Row start -->
+                <div class="row">
+                  <div class="col-sm-6 col-12">
+                    <!-- Row start -->
+                    <div class="row">
+                      <div class="col-sm-12 col-12">
+                        <!-- Form group start -->
+                        <div class="mb-3">
+                          <label for="customerName" class="form-label">Customer Name</label>
+                          <input type="text" id="customerName" class="form-control"
+                            placeholder="Enter Customer Name">
+                        </div>
+                        <!-- Form group end -->
+                      </div>
+                      <div class="col-sm-6 col-12">
+                        <!-- Form group start -->
+                        <div class="mb-3">
+                          <label for="invNumber" class="form-label">Invoice Number</label>
+                          <input type="text" id="invNumber" class="form-control"
+                            placeholder="Enter Invoice Number">
+                        </div>
+                        <!-- Form group end -->
+                      </div>
+                      <div class="col-sm-6 col-12">
+                        <!-- Form group start -->
+                        <div class="mb-3">
+                          <label for="dueDate" class="form-label">Due Date</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control datepicker-opens-left" id="dueDate"
+                              placeholder="DD/MM/YYYY">
+                            <span class="input-group-text">
+                              <i class="ri-calendar-2-fill"></i>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- Form group end -->
+                      </div>
+                      <div class="col-sm-12 col-12">
+                        <!-- Form group start -->
+                        <div class="mb-2">
+                          <label for="msgCustomer" class="form-label">Message</label>
+                          <textarea rows="3" id="msgCustomer" class="form-control"></textarea>
+                        </div>
+                        <!-- Form group end -->
+                      </div>
+                    </div>
+                    <!-- Row end -->
+                  </div>
+                </div>
+                <!-- Row end -->
+              </div>
+
+              <!-- Row start -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="table-outer">
+                    <table class="table m-0 align-middle">
+                      <thead>
+                        <tr>
+                          <th colspan="7" class="pt-3 pb-3">
+                            Items/Products
+                          </th>
+                        </tr>
+                        <tr>
+                          <th>Product</th>
+                          <th>Quantity</th>
+                          <th>Unit</th>
+                          <th>Price</th>
+                          <th>VAT</th>
+                          <th>Amount (Net)</th>
+                          <th>Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <!-- Form group start -->
+                            <select class="form-select" id="prd">
+                              <option>Select Product</option>
+                              <option>Mobiles</option>
+                              <option>Books</option>
+                            </select>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="m-0">
+                              <input type="number" class="form-control" id="qty">
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="m-0">
+                              <input type="text" class="form-control" id="unit">
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="input-group m-0">
+                              <input type="text" class="form-control" id="price">
+                              <span class="input-group-text">
+                                <i class="ri-money-dollar-circle-line"></i>
+                              </span>
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="input-group m-0">
+                              <input type="text" class="form-control" id="vat">
+                              <span class="input-group-text">%</span>
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="input-group m-0">
+                              <input type="text" class="form-control" id="amt">
+                              <span class="input-group-text">
+                                <i class="ri-money-dollar-circle-line"></i>
+                              </span>
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <div class="d-inline-flex gap-1">
+                              <button class="btn btn-outline-danger">
+                                <i class="ri-delete-bin-line"></i>
+                              </button>
+                              <button class="btn btn-outline-success">
+                                <i class="ri-edit-box-line"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <!-- Form group start -->
+                            <select class="form-select" id="prd2">
+                              <option>Select Product</option>
+                              <option>Mobiles</option>
+                              <option>Books</option>
+                            </select>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="m-0">
+                              <input type="number" class="form-control" id="qty2">
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="m-0">
+                              <input type="text" class="form-control" id="unit2">
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="input-group m-0">
+                              <input type="text" class="form-control" id="price2">
+                              <span class="input-group-text">
+                                <i class="ri-money-dollar-circle-line"></i>
+                              </span>
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="input-group m-0">
+                              <input type="text" class="form-control" id="vat2">
+                              <span class="input-group-text">%</span>
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <!-- Form group start -->
+                            <div class="input-group m-0">
+                              <input type="text" class="form-control" id="amt2">
+                              <span class="input-group-text">
+                                <i class="ri-money-dollar-circle-line"></i>
+                              </span>
+                            </div>
+                            <!-- Form group end -->
+                          </td>
+                          <td>
+                            <div class="d-inline-flex gap-1">
+                              <button class="btn btn-outline-danger">
+                                <i class="ri-delete-bin-line"></i>
+                              </button>
+                              <button class="btn btn-outline-success">
+                                <i class="ri-edit-box-line"></i>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <button class="btn btn-outline-primary text-nowrap">
+                              Add New Row
+                            </button>
+                          </td>
+                          <td colspan="6">
+                            <div class="row justify-content-end">
+                              <div class="col-auto">
+                                <label class="col-form-label" for="disc">Discount % of Total Amount</label>
+                              </div>
+                              <div class="col-auto">
+                                <input type="text" class="form-control" id="disc" placeholder="0%">
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="5">&nbsp;</td>
+                          <td>
+                            <p>Subtotal</p>
+                            <p>Discount</p>
+                            <p>VAT</p>
+                            <h5 class="mt-2 text-primary">Total USD</h5>
+                          </td>
+                          <td>
+                            <p>$0.00</p>
+                            <p>$0.00</p>
+                            <p>$0.00</p>
+                            <h5 class="mt-2 text-primary">$0.00</h5>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex justify-content-end gap-2 mt-2">
+                    <button class="btn btn-outline-secondary">
+                      Save as Draft
+                    </button>
+                    <a href="invoice-list.html" class="btn btn-success">Create Invoice</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Row end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Row end -->
+
+    </div>
+    <!-- App body ends -->
+
+    <!-- App footer starts -->
+    <div class="app-footer bg-white">
+      <span>© Medflex admin 2024</span>
+    </div>
+    <!-- App footer ends -->
+
+  </div>

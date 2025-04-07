@@ -1,0 +1,16 @@
+.sidebarMenuScroll {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    scrollbar-width:auto; 
+    -ms-overflow-style:none;
+  }
+  
+  .sidebarMenuScroll::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  #sidebar{
+    width: 17%;
+  }
